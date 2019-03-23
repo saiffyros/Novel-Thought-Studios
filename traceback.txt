@@ -1,0 +1,40 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+After initialization, but before game start.
+  File "renpy/common/00start.rpy", line 79, in _init_language
+    renpy.change_language(language)
+  File "renpy/common/00stylepreferences.rpy", line 124, in _m1_00stylepreferences__change_language
+    __update()
+  File "renpy/common/00stylepreferences.rpy", line 96, in _m1_00stylepreferences__update
+    renpy.style.rebuild()
+Exception: style slot_background is part of a loop of recursive styles (is one of its own parents).
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\bootstrap.py", line 313, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\main.py", line 524, in main
+    run(restart)
+  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\main.py", line 71, in run
+    renpy.translation.init_translation()
+  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\translation\__init__.py", line 558, in init_translation
+    renpy.store._init_language()  # @UndefinedVariable
+  File "renpy/common/00start.rpy", line 79, in _init_language
+    renpy.change_language(language)
+  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\translation\__init__.py", line 641, in change_language
+    i()
+  File "renpy/common/00stylepreferences.rpy", line 124, in _m1_00stylepreferences__change_language
+    __update()
+  File "renpy/common/00stylepreferences.rpy", line 96, in _m1_00stylepreferences__update
+    renpy.style.rebuild()
+  File "style.pyx", line 795, in renpy.style.rebuild
+  File "style.pyx", line 788, in renpy.style.build_styles
+  File "style.pyx", line 680, in renpy.style.build_style
+  File "style.pyx", line 671, in renpy.style.build_style
+Exception: style slot_background is part of a loop of recursive styles (is one of its own parents).
+
+Windows-8-6.2.9200
+Ren'Py 7.2.1.457
+ 1.0
+Sat Mar 23 15:04:37 2019
