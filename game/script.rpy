@@ -31,7 +31,7 @@ label start:
 
     a concerned "Where's my tart???"
 
-    show screen button1
+    #show screen button1
 
     a "I bet Janice ate it!"
 
