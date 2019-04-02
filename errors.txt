@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 753: style property hover is not known.
-    hover "/gui/FullSaveSlot.png" xalign 0.5
-         ^
+File "game/screens.rpy", line 706: The has statement is not allowed here.
+    has vbox
+       ^
 
 Ren'Py Version: Ren'Py 7.2.1.457
-Sat Mar 23 15:04:57 2019
+Mon Apr 01 20:15:45 2019

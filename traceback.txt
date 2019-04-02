@@ -1,32 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 34, in script
-    show screen button1
-  File "renpy/common/000statements.rpy", line 510, in execute_show_screen
-    renpy.show_screen(name, *args, **kwargs)
-Exception: Screen button1 is not known.
-
+  File "renpy/common/00start.rpy", line 203, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 448, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 448, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 458, in _execute_python_hide
+    renpy.load("_reload-2")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 34, in script
-    show screen button1
-  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\ast.py", line 1907, in execute
-    self.call("execute")
-  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\ast.py", line 1895, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\statements.py", line 220, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 510, in execute_show_screen
-    renpy.show_screen(name, *args, **kwargs)
-  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\display\screen.py", line 1077, in show_screen
-    raise Exception("Screen %s is not known.\n" % (name[0],))
-Exception: Screen button1 is not known.
-
+  File "renpy/common/00start.rpy", line 203, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 448, in script
+    python hide:
+  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\ast.py", line 896, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\python.py", line 1929, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00keymap.rpy", line 448, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 458, in _execute_python_hide
+    renpy.load("_reload-2")
+  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\loadsave.py", line 753, in load
+    log.unfreeze(roots, label="_after_load")
+  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\python.py", line 1884, in unfreeze
+    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
+  File "C:\Users\Rodrigo\Downloads\renpy-7.2.1-sdk\renpy\python.py", line 1712, in rollback
+    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 Windows-8-6.2.9200
 Ren'Py 7.2.1.457
  1.0
-Mon Mar 25 08:31:38 2019
+Mon Apr 01 20:13:40 2019

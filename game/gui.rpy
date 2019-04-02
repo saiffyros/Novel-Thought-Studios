@@ -220,7 +220,7 @@ define gui.choice_button_text_hover_color = "#ffffff"
 ## image files in gui/button, like the other kinds of buttons.
 
 ## The save slot button.
-define gui.slot_button_width = 276
+define gui.slot_button_width = 275
 define gui.slot_button_height = 206
 define gui.slot_button_borders = Borders(10, 10, 10, 10)
 define gui.slot_button_text_size = 14

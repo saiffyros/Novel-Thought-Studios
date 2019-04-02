@@ -684,6 +684,8 @@ screen file_slots(title):
 
                     $ slot = i + 1
 
+
+
                     button:
 
                         action FileAction(slot)
@@ -692,6 +694,7 @@ screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
+
                         text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                             style "slot_time_text"
 
@@ -699,6 +702,10 @@ screen file_slots(title):
                             style "slot_name_text"
 
                         key "save_delete" action FileDelete(slot)
+
+                        fixed:
+                            add "/gui/slotSave.png" xalign 0.5 yalign 1.0
+
 
             ## Buttons to access other pages.
             hbox:
